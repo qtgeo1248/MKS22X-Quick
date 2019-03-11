@@ -8,7 +8,13 @@ public class Driver {
         int same = 0;
         int greater = 0;
         for (int i = 0; i < data.length; i++) {
-            
+            if (data[i] < ans) {
+                less++;
+            } else if (data == ans) {
+                same++;
+            } else {
+                greater++;
+            }
         }
     }
     public static void main(String[] args) {
