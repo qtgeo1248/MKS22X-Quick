@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Driver {
     public static boolean test(int[] data, int k) {
         for (int i = 0; i < data.length; i++) {
@@ -14,7 +17,13 @@ public class Driver {
         return true;
     }
     public static void main(String[] args) {
-        int[] test1 = {7, 3, 4, 10};
-        System.out.println(Quick.quickselect(test1, 2));
+        Random gen = new Random();
+        ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
+        for (int i = 0; i < 1000; i++) { //i is the size
+            int[] test = new int[i];
+            for (int j = 0; j < test.length; j++) { //fills the array
+                test[j] = gen.nextInt();
+            }
+        }
     }
 }
