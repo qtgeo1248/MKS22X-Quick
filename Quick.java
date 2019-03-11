@@ -7,6 +7,9 @@ public class Quick {
     }
 
     public static int quickH(int[] data, int k, int start, int end) { //TEMP MAKE PRIVATE LATER
+        if (start == end && start == k) { //base case when you have narrowed down everything
+            return data[k];
+        }
         return 0; //TEMP
     }
 
