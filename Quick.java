@@ -1,6 +1,12 @@
+import java.util.Random;
+
 public class Quick {
 
     public static int quickselect(int[] data, int k) {
+        return 0; //TEMP
+    }
+
+    public static int quickH(int[] data, int k, int start, int end) { //TEMP MAKE PRIVATE LATER
         return 0; //TEMP
     }
 
