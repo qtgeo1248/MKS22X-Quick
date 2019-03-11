@@ -25,6 +25,9 @@ public class Quick {
             }
             data[0] = data[pivotIdx];
             data[pivotIdx] = pivot;
+            if (pivotIdx >= k) {
+                return quickH(data, k, start, pivotIdx);
+            }
             return 0; //TEMP
         }
     }
