@@ -13,10 +13,10 @@ public class Quick {
             Random gen = new Random();
             int pivotIdx = start + Math.abs(gen.nextInt()) % (end - start + 1);
             int pivot = data[pivotIdx];
-            data[pivotIdx] = data[0];
-            data[0] = pivot; //switches the pivot and the first el
-            pivotIdx = 0; //records the value to be returned (will be changed as I go through algorithm)
-            for (int i = 1; i < data.length; i++) {
+            data[pivotIdx] = data[start];
+            data[start] = pivot; //switches the pivot and the first el
+            pivotIdx = start; //records the value to be returned (will be changed as I go through algorithm)
+            for (int i = start + 1; i <= end; i++) {
                 int temp = data[i];
                 if (temp < pivot) { //if you find something less, switch with the k's value and then add one to k
                     pivotIdx++;
