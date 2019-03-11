@@ -13,6 +13,9 @@ public class Quick {
             Random gen = new Random();
             int pivotIdx = start + Math.abs(gen.nextInt()) % (end - start + 1);
             int pivot = data[pivotIdx];
+            data[pivotIdx] = data[0];
+            data[0] = pivot;
+            pivotIdx = 0;
             return 0; //TEMP
         }
     }
