@@ -5,6 +5,10 @@ public class Driver {
                 if (data[i] > data[k]) {
                     return false;
                 }
+            } else if (i > k) {
+                if (data[i] < data[k]) {
+                    return false;
+                }
             }
         }
     }
