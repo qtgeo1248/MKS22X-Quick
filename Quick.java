@@ -16,6 +16,12 @@ public class Quick {
             data[pivotIdx] = data[0];
             data[0] = pivot;
             pivotIdx = 0;
+            for (int i = 1; i < data.length; i++) {
+                int temp = data[i];
+                if (temp < pivot) {
+                    
+                }
+            }
             return 0; //TEMP
         }
     }
