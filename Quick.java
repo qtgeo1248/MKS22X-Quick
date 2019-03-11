@@ -3,11 +3,11 @@ import java.util.Random;
 public class Quick {
 
     public static int quickselect(int[] data, int k) {
-        return quickH(data, k, 0, data.length);
+        return quickH(data, k, 0, data.length - 1);
     }
 
     public static int quickH(int[] data, int k, int start, int end) { //TEMP MAKE PRIVATE LATER
-        if (start == end && start == k) { //base case when you have narrowed down everything
+        if (start == k || end == k) { //base case when you have narrowed down everything
             return data[k];
         } else {
             Random gen = new Random();
@@ -23,7 +23,7 @@ public class Quick {
                     data[k] = temp; //switches the small with the right-most value
                 }
             }
-            data[0] = data[pivotIdx];
+            data[start] = data[pivotIdx];
             data[pivotIdx] = pivot; //puts the pivot in the right position
             if (pivotIdx >= k) { //if you overshoot, you look at the left side
                 return quickH(data, k, start, pivotIdx);
