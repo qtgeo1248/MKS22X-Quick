@@ -9,8 +9,12 @@ public class Quick {
     public static int quickH(int[] data, int k, int start, int end) { //TEMP MAKE PRIVATE LATER
         if (start == end && start == k) { //base case when you have narrowed down everything
             return data[k];
+        } else {
+            Random gen = new Random();
+            int pivotIdx = start + Math.abs(gen.nextInt()) % (end - start + 1);
+            int pivot = data[pivotIdx];
+            return 0; //TEMP
         }
-        return 0; //TEMP
     }
 
     public static int partition (int[] data, int start, int end) {
