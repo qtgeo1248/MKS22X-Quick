@@ -3,19 +3,13 @@ import java.util.Random;
 import java.lang.Math;
 
 public class Driver {
-    public static boolean test(int[] data, int k) {
+    public static boolean test(int[] data, int k, int ans) {
+        int less = 0;
+        int same = 0;
+        int greater = 0;
         for (int i = 0; i < data.length; i++) {
-            if (i < k) {
-                if (data[i] > data[k]) { //when the thing in the left side is wrong
-                    return false;
-                }
-            } else if (i > k) {
-                if (data[i] < data[k]) { //when the thing in the right side is wrong
-                    return false;
-                }
-            }
+            
         }
-        return true;
     }
     public static void main(String[] args) {
         Random gen = new Random();
