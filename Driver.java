@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.lang.Math;
 
 public class Driver {
     public static boolean test(int[] data, int k) {
@@ -24,6 +25,8 @@ public class Driver {
             for (int j = 0; j < test.length; j++) { //fills the array
                 test[j] = gen.nextInt();
             }
+            int k = Math.abs(gen.nextInt()) % i;
+            int ans = Quick.quickselect(test, k);
         }
     }
 }
