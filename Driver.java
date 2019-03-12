@@ -35,5 +35,8 @@ public class Driver {
             System.out.println(test(test, k, ans));
         }
         */
+        int[] data = {5, 2, 3, 4, 1, 0};
+        System.out.println(Arrays.toString(data));
+        System.out.println("3, " + Quick.quickselect(data, 3));
     }
 }
