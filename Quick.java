@@ -12,21 +12,16 @@ public class Quick {
         } else {*/
         int pivot = data[start];
         int pivotIdx = start; //records the value to be returned (will be changed as I go through algorithm)
-        System.out.println(Arrays.toString(data) + ", " + pivotIdx + "a" + pivot);
         for (int i = start + 1; i <= end; i++) {
             int temp = data[i];
-            System.out.println(Arrays.toString(data) + ", " + pivotIdx + "b" + pivot);
             if (temp < pivot) { //if you find something less, switch with the k's value and then add one to k
-                System.out.println(Arrays.toString(data) + ", " + pivotIdx + "c" + pivot);
                 pivotIdx++;
                 data[i] = data[pivotIdx];
                 data[pivotIdx] = temp; //switches the small with the right-most value
             }
         }
-        System.out.println(Arrays.toString(data) + ", " + pivotIdx + "d" + pivot);
         data[start] = data[pivotIdx];
         data[pivotIdx] = pivot; //puts the pivot in the right position
-        System.out.println(Arrays.toString(data) + ", " + pivotIdx + "e" + pivot);
         if (pivotIdx > k) { //if you overshoot, you look at the left side
             return quickH(data, k, start, pivotIdx - 1);
         } else if (pivotIdx < k) { //if you undershoot, you look at the right side
