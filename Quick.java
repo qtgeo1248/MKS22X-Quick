@@ -7,7 +7,7 @@ public class Quick {
     }
 
     public static int quickH(int[] data, int k, int start, int end) {
-        int pivot = data[start];
+        /*int pivot = data[start];
         int pivotIdx = start; //records the value to be returned (will be changed as I go through algorithm)
         for (int i = start + 1; i <= end; i++) {
             int temp = data[i];
@@ -25,13 +25,14 @@ public class Quick {
             return quickH(data, k, pivotIdx + 1, end);
         } else {
             return pivot;
-        }
+        }*/
+
     }
 
     public static int partition(int[] data, int start, int end) {
-        int pivot = data[0];
-        int i = 1; //records the value to be returned (will be changed as I go through algorithm)
-        int j = data.length - 1; //records the index of the greater than
+        int pivot = data[start];
+        int i = start + 1; //records the value to be returned (will be changed as I go through algorithm)
+        int j = end; //records the index of the greater than
         while (i != j) {
             int temp = data[i];
             if (temp < pivot) { //if you find something less, do nothing
