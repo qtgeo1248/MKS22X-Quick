@@ -7,24 +7,9 @@ public class Quick {
     }
 
     public static int quickH(int[] data, int k, int start, int end) {
-        int pivot = data[start];
-        int pivotIdx = start; //records the value to be returned (will be changed as I go through algorithm)
-        for (int i = start + 1; i <= end; i++) {
-            int temp = data[i];
-            if (temp < pivot) { //if you find something less, switch with the k's value and then add one to k
-                pivotIdx++;
-                data[i] = data[pivotIdx];
-                data[pivotIdx] = temp; //switches the small with the right-most value
-            }
-        }
-        data[start] = data[pivotIdx];
-        data[pivotIdx] = pivot; //puts the pivot in the right position
-        if (pivotIdx > k) { //if you overshoot, you look at the left side
-            return quickH(data, k, start, pivotIdx - 1);
-        } else if (pivotIdx < k) { //if you undershoot, you look at the right side
-            return quickH(data, k, pivotIdx + 1, end);
-        } else {
-            return pivot;
+        int ans = partition(data, start, end);
+        if (ans == k) { //case when you find it
+            return data[ans];
         }
     }
 
