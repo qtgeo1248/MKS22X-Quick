@@ -30,7 +30,7 @@ public class Quick {
 
     public static int partition(int[] data, int start, int end) {
         int pivot = data[0];
-        int i = 0; //records the value to be returned (will be changed as I go through algorithm)
+        int i = 1; //records the value to be returned (will be changed as I go through algorithm)
         int j = data.length - 1; //records the index of the greater than
         while (i != j) {
             int temp = data[i];

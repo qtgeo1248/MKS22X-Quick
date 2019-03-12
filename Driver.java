@@ -20,6 +20,7 @@ public class Driver {
         return (less <= k) && (same + less >= k);
     }
     public static void main(String[] args) {
+        /*
         Random gen = new Random();
         ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
         for (int i = 1; i <= 16385; i++) { //i is the size    //131073 is 2^14+1
@@ -42,6 +43,7 @@ public class Driver {
             System.out.println("Did these sizes WRONG:");
             System.out.println(wrong);
         }
+        */
         /*
         int[] slow = new int[16385];
         for (int i = 0; i < slow.length; i++) {
@@ -49,5 +51,9 @@ public class Driver {
         }
         System.out.println("5000: " + Quick.quickselect(slow, 5000));
         */
+
+        int[] test = {6, 2, 7, 3, 1, 3};
+        System.out.println(Arrays.toString(test));
+        System.out.println(Quick.partition(test, 0, 5));
     }
 }
