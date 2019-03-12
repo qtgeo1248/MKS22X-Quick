@@ -39,10 +39,11 @@ public class Quick {
             } else { //if you find something more, move it to the end
                 data[i] = data[j];
                 data[j] = temp;
+                j--;
             }
         }
-        data[0] = data[k];
-        data[k] = pivot; //puts the pivot in the right position
-        return k;
+        data[0] = data[i];
+        data[i] = pivot; //puts the pivot in the right position
+        return i;
     }
 }
