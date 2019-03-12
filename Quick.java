@@ -7,7 +7,7 @@ public class Quick {
     }
 
     public static int quickH(int[] data, int k, int start, int end) {
-        /*int pivot = data[start];
+        int pivot = data[start];
         int pivotIdx = start; //records the value to be returned (will be changed as I go through algorithm)
         for (int i = start + 1; i <= end; i++) {
             int temp = data[i];
@@ -25,8 +25,7 @@ public class Quick {
             return quickH(data, k, pivotIdx + 1, end);
         } else {
             return pivot;
-        }*/
-
+        }
     }
 
     public static int partition(int[] data, int start, int end) {
@@ -43,7 +42,7 @@ public class Quick {
                 j--;
             }
         }
-        data[0] = data[i];
+        data[start] = data[i];
         data[i] = pivot; //puts the pivot in the right position
         return i;
     }

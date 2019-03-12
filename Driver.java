@@ -52,8 +52,11 @@ public class Driver {
         System.out.println("5000: " + Quick.quickselect(slow, 5000));
         */
 
-        int[] test = {6, 2, 7, 3, 1, 3};
-        System.out.println(Arrays.toString(test));
-        System.out.println(Quick.partition(test, 0, 5));
+        int[] test1 = {6, 2, 7, 3, 1, 3};
+        System.out.println(Quick.partition(test1, 0, 5));
+        System.out.println(Arrays.toString(test1));
+        int[] test2 = {8, 2, 6, 1, 4, 3, 7, 9, 0};
+        System.out.println(Quick.partition(test2, 2, 6));
+        System.out.println(Arrays.toString(test2));
     }
 }
