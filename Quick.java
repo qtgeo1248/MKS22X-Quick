@@ -18,7 +18,10 @@ public class Quick {
         return ans;
     }
 
-    private static int partition(int[] data, int start, int end) {
+    public static int partition(int[] data, int start, int end) {
+        if (data.length == 1) {
+            return data[0];
+        }
         int pivot = data[start];
         int i = start + 1; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than

@@ -23,7 +23,7 @@ public class Driver {
         /*
         Random gen = new Random();
         ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
-        for (int i = 1; i <= 16385; i++) { //i is the size    //131073 is 2^14+1
+        for (int i = 2; i <= 16385; i++) { //i is the size    //131073 is 2^14+1
             int[] test = new int[i];
             for (int j = 0; j < test.length; j++) { //fills the array
                 test[j] = gen.nextInt() % 100;
@@ -44,6 +44,7 @@ public class Driver {
             System.out.println(wrong);
         }
         */
+
         /*
         int[] slow = new int[16385];
         for (int i = 0; i < slow.length; i++) {
@@ -58,5 +59,8 @@ public class Driver {
         int[] test2 = {8, 2, 6, 1, 4, 3, 7, 9, 0};
         System.out.println(Quick.partition(test2, 2, 6));
         System.out.println(Arrays.toString(test2));
+        int[] test3 = {3};
+        System.out.println(Quick.partition(test3, 2, 6));
+        System.out.println(Arrays.toString(test3));
     }
 }
