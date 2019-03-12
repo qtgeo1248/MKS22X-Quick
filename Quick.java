@@ -15,14 +15,18 @@ public class Quick {
         System.out.println(Arrays.toString(data) + ", " + pivotIdx + ", " + pivot);
         for (int i = start + 1; i <= end; i++) {
             int temp = data[i];
+            System.out.println(Arrays.toString(data) + ", " + pivotIdx + ", " + pivot);
             if (temp < pivot) { //if you find something less, switch with the k's value and then add one to k
+                System.out.println(Arrays.toString(data) + ", " + pivotIdx + ", " + pivot);
                 pivotIdx++;
                 data[i] = data[pivotIdx];
                 data[pivotIdx] = temp; //switches the small with the right-most value
             }
         }
+        System.out.println(Arrays.toString(data) + ", " + pivotIdx + ", " + pivot);
         data[start] = data[pivotIdx];
         data[pivotIdx] = pivot; //puts the pivot in the right position
+        System.out.println(Arrays.toString(data) + ", " + pivotIdx + ", " + pivot);
         if (pivotIdx > k) { //if you overshoot, you look at the left side
             return quickH(data, k, start, pivotIdx);
         } else if (pivotIdx < k) { //if you undershoot, you look at the right side
