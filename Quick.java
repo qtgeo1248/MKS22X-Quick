@@ -10,6 +10,8 @@ public class Quick {
         int ans = partition(data, start, end);
         if (ans == k) { //case when you find it
             return data[ans];
+        } else if (ans < k) { //case when you undershoot
+            ans = partition(data, ans + 1, end);
         }
     }
 
