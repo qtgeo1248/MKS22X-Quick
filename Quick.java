@@ -8,12 +8,12 @@ public class Quick {
 
     public static int quickH(int[] data, int k, int start, int end) {
         int ans = partition(data, start, end);
-        if (ans == k) { //case when you find it
-            return data[ans];
-        } else if (ans < k) { //case when you undershoot
-            ans = partition(data, ans + 1, end);
-        } else { //case when you overshoot
-            ans = partition(data, start, ans - 1);
+        while (ans != k) {
+            if (ans < k) { //case when you undershoot
+                ans = partition(data, ans + 1, end);
+            } else if (ans > k) { //case when you overshoot
+                ans = partition(data, start, ans - 1);
+            }
         }
         return ans;
     }
