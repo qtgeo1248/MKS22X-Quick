@@ -20,23 +20,27 @@ public class Driver {
         return (less <= k) && (same + less >= k);
     }
     public static void main(String[] args) {
-        /*
         Random gen = new Random();
         ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
-        for (int i = 1; i < 10; i++) { //i is the size
+        for (int i = 1; i < 100; i++) { //i is the size
             int[] test = new int[i];
             for (int j = 0; j < test.length; j++) { //fills the array
                 test[j] = gen.nextInt() % 100;
             }
             int k = Math.abs(gen.nextInt()) % i;
             int ans = Quick.quickselect(test, k);
-            System.out.println(Arrays.toString(test));
-            System.out.println(k + ", " + ans);
-            System.out.println(test(test, k, ans));
+            //System.out.println(Arrays.toString(test));
+            //System.out.println(k + ", " + ans);
+            //System.out.println(test(test, k, ans));
+            if (!test(test, k, ans)) {
+                wrong.add(i);
+            }
         }
-        */
-        int[] data = {5, 2, 3, 4, 1, 0};
-        System.out.println(Arrays.toString(data));
-        System.out.println("3, " + Quick.quickselect(data, 3));
+        if (wrong.size() == 0) {
+            System.out.println("DID ALL THINGS CORRECT\nCONGRADULATIONS YOU MAY NOW SLEEP");
+        } else {
+            System.out.println("Did these sizes WRONG:");
+            System.out.println(wrong);
+        }
     }
 }
