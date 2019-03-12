@@ -12,7 +12,10 @@ public class Quick {
             return data[ans];
         } else if (ans < k) { //case when you undershoot
             ans = partition(data, ans + 1, end);
+        } else { //case when you overshoot
+            ans = partition(data, start, ans - 1);
         }
+        return ans;
     }
 
     private static int partition(int[] data, int start, int end) {
