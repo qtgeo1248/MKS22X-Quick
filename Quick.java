@@ -25,7 +25,10 @@ public class Quick {
     }
 
     public static void quicksortH(int[] data, int start, int end) {
-        
+        int ans = partition(data, start, end);
+        if (start != end) {
+            
+        }
     }
 
     public static int partition(int[] data, int start, int end) {
