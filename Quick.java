@@ -39,10 +39,7 @@ public class Quick {
         if (data.length == 0) {
             return 0;
         }
-        int middle = (start + end) / 2;
-        int[] helper = {data[start], data[middle], data[end]};
-        Arrays.sort(helper); //sorted the elements so i can find median
-        int pivotIdx = helper[1];
+        int pivotIdx = median(data, start, end);
         int pivot = data[pivotIdx];
         data[pivotIdx] = data[start];
         data[start] = pivot;
@@ -79,5 +76,16 @@ public class Quick {
         data[j] = pivot; //puts the pivot in the right position
         System.out.println("f" + pivot + ", " + i + ", " + j + Arrays.toString(data));
         return i;
+    }
+
+    public static int median(int[] data, int start, int end) {
+        int middle = (start + end) / 2;
+        if (data[start] <= data[end] && data[start] >= data[middle]) {
+            return start;
+        } else if (data[middle] <= data[end] && data[middle] >= data[start]) {
+            return middle;
+        } else {
+            return end;
+        }
     }
 }
