@@ -10,20 +10,24 @@ public class Quick {
         int ans = partition(data, start, end);
         while (ans != k) {
             if (ans < k) { //case when you undershoot
-                ans = partition(data, ans + 1, end);
+                start = ans + 1;
+                ans = partition(data, start, end);
             } else { //case when you overshoot
-                ans = partition(data, start, ans - 1);
+                end = ans - 1;
+                ans = partition(data, start, end);
             }
         }
         return data[ans];
     }
 
     public static int partition(int[] data, int start, int end) {
+        if (data.length == 0) {
+            return 0;
+        }
         int pivot = data[start];
-        System.out.println(pivot + Arrays.toString(data));
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
-        while (i != j) {
+        while (i != j && i <= end) {
             int temp = data[i];
             if (temp <= pivot) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
@@ -39,6 +43,5 @@ public class Quick {
         data[start] = data[i];
         data[i] = pivot; //puts the pivot in the right position
         return i;
-        System.out.println(pivot + Arrays.toString(data));
     }
 }

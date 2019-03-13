@@ -20,7 +20,7 @@ public class Driver {
         return (less <= k) && (same + less >= k);
     }
     public static void main(String[] args) {
-        /*
+        
         Random gen = new Random();
         ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
         for (int i = 1; i <= 1025; i++) { //i is the size    //1025 is 2^10+1
@@ -46,7 +46,7 @@ public class Driver {
             System.out.println("Did these sizes WRONG:");
             System.out.println(wrong);
         }
-        */
+
 
 
 
@@ -57,7 +57,7 @@ public class Driver {
         }
         System.out.println("5000: " + Quick.quickselect(slow, 5000));
         */
-
+        /*
         int[] test1 = {6, 2, 7, 3, 1, 3};
         System.out.println(Quick.quickselect(test1, 1));
         System.out.println(Arrays.toString(test1));
@@ -68,7 +68,8 @@ public class Driver {
         System.out.println(Quick.quickselect(test3, 0));
         System.out.println(Arrays.toString(test3));
         int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
-        System.out.println(Quick.quickselect(test3, 3));
-        System.out.println(Arrays.toString(test3));
+        System.out.println(Quick.quickselect(test4, 3));
+        System.out.println(Arrays.toString(test4));
+        */
     }
 }
