@@ -32,6 +32,9 @@ public class Quick {
                 j--;
             }
         }
+        if (data[i] > pivot) {
+            i--;
+        }
         data[start] = data[i];
         data[i] = pivot; //puts the pivot in the right position
         return i;
