@@ -21,13 +21,14 @@ public class Quick {
     }
 
     public static void quicksort(int[] data) {
-
+        quicksortH(data, 0, data.length - 1);
     }
 
     public static void quicksortH(int[] data, int start, int end) {
         int ans = partition(data, start, end);
         if (start != end) {
-            
+            quicksortH(data, start, ans - 1);
+            quicksortH(data, ans + 1, end);
         }
     }
 
