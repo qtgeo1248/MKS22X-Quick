@@ -39,7 +39,10 @@ public class Quick {
         int middle = (start + end) / 2;
         int[] helper = {start, middle, end};
         Arrays.sort(helper); //sorted the elements so i can find median
-        int pivot = data[start];
+        int pivotIdx = helper[1];
+        int pivot = data[pivotIdx];
+        data[pivotIdx] = data[start];
+        data[start] = pivot;
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
         while (i != j) {
