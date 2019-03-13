@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.lang.Math;
 
 public class Quick {
 
@@ -49,12 +50,14 @@ public class Quick {
         int j = end; //records the index of the greater than
         while (i != j) {
             int temp = data[i];
-            if (temp <= pivot) { //if you find something less, do nothing
+            if (temp < pivot) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
-            } else { //if you find something more, move it to the end
+            } else if (temp > pivot){ //if you find something more, move it to the end
                 data[i] = data[j];
                 data[j] = temp;
                 j--;
+            } else {
+                int place =
             }
         }
         if (data[i] > pivot) {
