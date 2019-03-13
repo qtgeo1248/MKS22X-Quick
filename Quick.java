@@ -80,9 +80,9 @@ public class Quick {
 
     public static int median(int[] data, int start, int end) {
         int middle = (start + end) / 2;
-        if (data[start] <= data[end] && data[start] >= data[middle]) {
+        if ((data[start] <= data[end] && data[start] >= data[middle]) || (data[start] >= data[end] && data[start] <= data[middle])) {
             return start;
-        } else if (data[middle] <= data[end] && data[middle] >= data[start]) {
+        } else if ((data[middle] <= data[end] && data[middle] >= data[start]) || (data[middle] >= data[end] && data[middle] <= data[start])) {
             return middle;
         } else {
             return end;
