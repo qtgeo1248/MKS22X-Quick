@@ -23,12 +23,14 @@ public class Driver {
         /*
         Random gen = new Random();
         ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
-        for (int i = 2; i <= 16385; i++) { //i is the size    //131073 is 2^14+1
+        for (int i = 1; i <= 1025; i++) { //i is the size    //1025 is 2^10+1
+            System.out.println(i);
             int[] test = new int[i];
             for (int j = 0; j < test.length; j++) { //fills the array
                 test[j] = gen.nextInt() % 100;
             }
             int k = Math.abs(gen.nextInt()) % i;
+            System.out.println(Arrays.toString(test) + ", " + k);
             int ans = Quick.quickselect(test, k);
             //System.out.println(Arrays.toString(test));
             //System.out.println(k + ", " + ans);
@@ -36,6 +38,7 @@ public class Driver {
             if (!test(test, k, ans)) {
                 wrong.add(i);
             }
+            System.out.println(i);
         }
         if (wrong.size() == 0) {
             System.out.println("DID ALL THINGS CORRECT\nCONGRADULATIONS YOU MAY NOW SLEEP");
@@ -44,6 +47,7 @@ public class Driver {
             System.out.println(wrong);
         }
         */
+
 
 
         /*
@@ -63,6 +67,8 @@ public class Driver {
         int[] test3 = {3};
         System.out.println(Quick.quickselect(test3, 0));
         System.out.println(Arrays.toString(test3));
-
+        int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
+        System.out.println(Quick.quickselect(test3, 3));
+        System.out.println(Arrays.toString(test3));
     }
 }

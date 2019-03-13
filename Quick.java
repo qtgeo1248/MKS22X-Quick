@@ -20,6 +20,7 @@ public class Quick {
 
     public static int partition(int[] data, int start, int end) {
         int pivot = data[start];
+        System.out.println(pivot + Arrays.toString(data));
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
         while (i != j) {
@@ -38,5 +39,6 @@ public class Quick {
         data[start] = data[i];
         data[i] = pivot; //puts the pivot in the right position
         return i;
+        System.out.println(pivot + Arrays.toString(data));
     }
 }
