@@ -58,6 +58,13 @@ public class Quick {
                 j--;
             } else { //when you find something equal
                 int place = Math.abs(gen.nextInt()) % 2;
+                if (place == 0) {
+                    i++;
+                } else {
+                    data[i] = data[j];
+                    data[j] = temp;
+                    j--;
+                }
             }
         }
         if (data[i] > pivot) {
