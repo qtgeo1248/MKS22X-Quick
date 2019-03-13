@@ -48,7 +48,7 @@ public class Quick {
         System.out.println("a" + pivot + ", " + i + ", " + j + Arrays.toString(data));
         while (i != j) {
             int temp = data[i];
-            if (temp < pivot) { //if you find something less, do nothing
+            if (temp < pivot || i == start) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
                 System.out.println("b" + pivot + ", " + i + ", " + j + Arrays.toString(data));
             } else if (temp > pivot) { //if you find something more, move it to the end
@@ -72,8 +72,8 @@ public class Quick {
         if (data[i] > pivot) {
             i--;
         }
-        data[start] = data[j];
-        data[j] = pivot; //puts the pivot in the right position
+        data[start] = data[i];
+        data[i] = pivot; //puts the pivot in the right position
         System.out.println("f" + pivot + ", " + i + ", " + j + Arrays.toString(data));
         return i;
     }
