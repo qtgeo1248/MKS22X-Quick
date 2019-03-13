@@ -52,17 +52,12 @@ public class Quick {
             int temp = data[i];
             if (temp < pivot) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
-            } else if (temp > pivot){ //if you find something more, move it to the end
+            } else if (temp > pivot) { //if you find something more, move it to the end
                 data[i] = data[j];
                 data[j] = temp;
                 j--;
-            } else {
+            } else { //when you find something equal
                 int place = Math.abs(gen.nextInt()) % 2;
-                if (place == 0) { //goes to right of pivot
-
-                } else { //goes to left of pivot
-
-                }
             }
         }
         if (data[i] > pivot) {
