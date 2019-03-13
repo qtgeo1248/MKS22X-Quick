@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Quick {
 
@@ -33,6 +34,7 @@ public class Quick {
     }
 
     public static int partition(int[] data, int start, int end) {
+        Random gen = new Random();
         if (data.length == 0) {
             return 0;
         }
