@@ -61,6 +61,7 @@ public class Driver {
         }
         */
 
+        /* //TESTING QUICKSORT
         //FROM THEODORE WU
         Random r = new Random(); int sucesses = 0;
 		int tests = 401; System.out.println("testing array sizes 1-400 having numbers from 0-n, asking for a random smallest int. (arrays do not contain duplicates)");
@@ -105,6 +106,7 @@ public class Driver {
         } else if (sucesses < tests-1) {
             System.out.println("Maybe if you compile and run again it will work.");
         }
+        */
 
 
         /*
