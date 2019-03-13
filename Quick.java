@@ -40,7 +40,7 @@ public class Quick {
             return 0;
         }
         int middle = (start + end) / 2;
-        int[] helper = {start, middle, end};
+        int[] helper = {data[start], data[middle], data[end]};
         Arrays.sort(helper); //sorted the elements so i can find median
         int pivotIdx = helper[1];
         int pivot = data[pivotIdx];
@@ -48,30 +48,36 @@ public class Quick {
         data[start] = pivot;
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
+        System.out.println("a" + pivot + ", " + i + ", " + j + Arrays.toString(data));
         while (i != j) {
             int temp = data[i];
             if (temp < pivot) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
+                System.out.println("b" + pivot + ", " + i + ", " + j + Arrays.toString(data));
             } else if (temp > pivot) { //if you find something more, move it to the end
                 data[i] = data[j];
                 data[j] = temp;
                 j--;
+                System.out.println("c" + pivot + ", " + i + ", " + j + Arrays.toString(data));
             } else { //when you find something equal
                 int place = Math.abs(gen.nextInt()) % 2;
                 if (place == 0) {
                     i++;
+                    System.out.println("d" + pivot + ", " + i + ", " + j + Arrays.toString(data));
                 } else {
                     data[i] = data[j];
                     data[j] = temp;
                     j--;
+                    System.out.println("e" + pivot + ", " + i + ", " + j + Arrays.toString(data));
                 }
             }
         }
         if (data[i] > pivot) {
             i--;
         }
-        data[start] = data[i];
-        data[i] = pivot; //puts the pivot in the right position
+        data[start] = data[j];
+        data[j] = pivot; //puts the pivot in the right position
+        System.out.println("f" + pivot + ", " + i + ", " + j + Arrays.toString(data));
         return i;
     }
 }
