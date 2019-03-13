@@ -19,8 +19,21 @@ public class Driver {
         }
         return (less <= k) && (same + less >= k);
     }
+    public static void fillRandom(int[] data) {
+        Random r = new Random();
+	    int index = 0;
+	    for (int i = 0; i < data.length; i++) {
+            data[i] =  i; //r.nextInt(data.length); fills with random numbers
+        }
+        for (int i = 0; i < data.length; i++) {
+            int copy = data[i];
+	        int rand = r.nextInt(data.length);
+	        data[i] = data[rand];
+	        data[rand] = copy;
+        }
+    }
     public static void main(String[] args) {
-        
+        /* //TESTING QUICKSELECT
         Random gen = new Random();
         ArrayList<Integer> wrong = new ArrayList<Integer>(); //this is the list of things you got wrong
         for (int i = 1; i <= 1025; i++) { //i is the size    //1025 is 2^10+1
@@ -46,6 +59,7 @@ public class Driver {
             System.out.println("Did these sizes WRONG:");
             System.out.println(wrong);
         }
+        */
 
 
 
