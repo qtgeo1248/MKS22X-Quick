@@ -36,6 +36,8 @@ public class Quick {
         if (data.length == 0) {
             return 0;
         }
+        int middle = (start + end) / 2;
+        int pivotIdx = median(data[start], data[end], data[middle]);
         int pivot = data[start];
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
