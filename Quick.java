@@ -57,7 +57,12 @@ public class Quick {
                 data[j] = temp;
                 j--;
             } else {
-                int place =
+                int place = Math.abs(gen.nextInt()) % 2;
+                if (place == 0) { //goes to right of pivot
+
+                } else { //goes to left of pivot
+
+                }
             }
         }
         if (data[i] > pivot) {
