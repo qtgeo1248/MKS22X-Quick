@@ -3,10 +3,10 @@ import java.util.Arrays;
 public class Quick {
 
     public static int quickselect(int[] data, int k) {
-        return quickH(data, k, 0, data.length - 1);
+        return quickselectH(data, k, 0, data.length - 1);
     }
 
-    public static int quickH(int[] data, int k, int start, int end) {
+    private static int quickselectH(int[] data, int k, int start, int end) {
         int ans = partition(data, start, end);
         while (ans != k) {
             if (ans < k) { //case when you undershoot
@@ -18,6 +18,14 @@ public class Quick {
             }
         }
         return data[ans];
+    }
+
+    public static void quicksort(int[] data) {
+
+    }
+
+    public static void quicksortH(int[] data, int start, int end) {
+        
     }
 
     public static int partition(int[] data, int start, int end) {
