@@ -26,7 +26,7 @@ public class Quick {
 
     public static void quicksortH(int[] data, int start, int end) {
         int ans = partition(data, start, end);
-        if (start != end) {
+        if (start < end) {
             quicksortH(data, start, ans - 1);
             quicksortH(data, ans + 1, end);
         }
@@ -37,11 +37,12 @@ public class Quick {
             return 0;
         }
         int middle = (start + end) / 2;
-        int pivotIdx = median(data[start], data[end], data[middle]);
+        int[] helper = {start, middle, end};
+        Arrays.sort(helper); //sorted the elements so i can find median
         int pivot = data[start];
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
-        while (i != j && i <= end) {
+        while (i != j) {
             int temp = data[i];
             if (temp <= pivot) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
