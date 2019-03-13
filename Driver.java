@@ -45,6 +45,7 @@ public class Driver {
         }
         */
 
+
         /*
         int[] slow = new int[16385];
         for (int i = 0; i < slow.length; i++) {
@@ -54,13 +55,14 @@ public class Driver {
         */
 
         int[] test1 = {6, 2, 7, 3, 1, 3};
-        System.out.println(Quick.partition(test1, 0, 5));
+        System.out.println(Quick.quickselect(test1, 1));
         System.out.println(Arrays.toString(test1));
         int[] test2 = {8, 2, 6, 1, 4, 3, 7, 9, 0};
-        System.out.println(Quick.partition(test2, 2, 6));
+        System.out.println(Quick.quickselect(test2, 4));
         System.out.println(Arrays.toString(test2));
         int[] test3 = {3};
-        System.out.println(Quick.partition(test3, 2, 6));
+        System.out.println(Quick.quickselect(test3, 0));
         System.out.println(Arrays.toString(test3));
+
     }
 }

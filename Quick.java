@@ -11,24 +11,21 @@ public class Quick {
         while (ans != k) {
             if (ans < k) { //case when you undershoot
                 ans = partition(data, ans + 1, end);
-            } else if (ans > k) { //case when you overshoot
+            } else { //case when you overshoot
                 ans = partition(data, start, ans - 1);
             }
         }
-        return ans;
+        return data[ans];
     }
 
     public static int partition(int[] data, int start, int end) {
-        if (data.length == 1) {
-            return data[0];
-        }
         int pivot = data[start];
-        int i = start + 1; //records the value to be returned (will be changed as I go through algorithm)
+        int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
         while (i != j) {
             int temp = data[i];
-            if (temp < pivot) { //if you find something less, do nothing
-                i++; //adds one to the thing you return
+            if (temp <= pivot) { //if you find something less, do nothing
+                i++; //adds one to the thing you return\
             } else { //if you find something more, move it to the end
                 data[i] = data[j];
                 data[j] = temp;
