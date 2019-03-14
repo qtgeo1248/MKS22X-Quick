@@ -93,6 +93,11 @@ public class Quick {
             int temp = data[i];
             if (temp == pivot) {
                 i++;
+            } else if (temp < pivot) {
+                data[i] = data[lt];
+                data[lt] = temp;
+                lt++;
+                i++;
             }
         }
         int[] ans = {};
