@@ -98,6 +98,10 @@ public class Quick {
                 data[lt] = temp;
                 lt++;
                 i++;
+            } else {
+                data[i] = data[gt];
+                data[gt] = temp;
+                gt--;
             }
         }
         int[] ans = {};
