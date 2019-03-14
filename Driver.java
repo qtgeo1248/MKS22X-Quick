@@ -111,10 +111,19 @@ public class Driver {
 
         Random gen = new Random();
         int[] slow = new int[500000];
+        int[] slowAns = new int[500000];
         for (int i = 0; i < slow.length; i++) {
-            slow[i] = Math.abs(gen.nextInt()) % 1000;
+            int add = Math.abs(gen.nextInt()) % 1000;
+            slow[i] = add;
+            slowAns[i] = add;
         }
-        System.out.println("5000: " + Quick.quickselect(slow, 5000));
+        long startQuick = System.currentTimeMillis();
+        Quick.quicksort(slow);
+        long endQuick = System.currentTimeMillis();
+        long startAns = System.currentTimeMillis();
+        Arrays.sort(slowAns);
+        long endAns = System.currentTimeMillis();
+        System.out.println();
 
         /*
         int[] test1 = {6, 2, 7, 3, 1, 3};
