@@ -116,7 +116,7 @@ public class Driver {
         }
         System.out.println("5000: " + Quick.quickselect(slow, 5000));
         */
-
+        /*
         int[] test1 = {6, 2, 7, 3, 1, 3};
         System.out.println(Quick.quickselect(test1, 1));
         System.out.println(Arrays.toString(test1));
@@ -129,9 +129,9 @@ public class Driver {
         int[] test5 = {2, 1};
         System.out.println(Quick.quickselect(test5, 0));
         System.out.println(Arrays.toString(test5));
-        //int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
-        //System.out.println(Quick.quickselect(test4, 3));
-        //System.out.println(Arrays.toString(test4));
-
+        int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
+        System.out.println(Quick.quickselect(test4, 3));
+        System.out.println(Arrays.toString(test4));
+        */
     }
 }
