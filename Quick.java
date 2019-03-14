@@ -27,8 +27,8 @@ public class Quick {
     }
 
     public static void quicksortH(int[] data, int start, int end) {
-        int ans = partition(data, start, end);
         if (start < end) {
+            int ans = partition(data, start, end);
             quicksortH(data, start, ans - 1);
             quicksortH(data, ans + 1, end);
         }
@@ -45,27 +45,22 @@ public class Quick {
         data[start] = pivot;
         int i = start; //records the value to be returned (will be changed as I go through algorithm)
         int j = end; //records the index of the greater than
-        System.out.println("a" + pivot + ", " + i + ", " + j + Arrays.toString(data));
-        while (i != j) {
+        while (i < j) {
             int temp = data[i];
             if (temp < pivot || i == start) { //if you find something less, do nothing
                 i++; //adds one to the thing you return\
-                System.out.println("b" + pivot + ", " + i + ", " + j + Arrays.toString(data));
             } else if (temp > pivot) { //if you find something more, move it to the end
                 data[i] = data[j];
                 data[j] = temp;
                 j--;
-                System.out.println("c" + pivot + ", " + i + ", " + j + Arrays.toString(data));
             } else { //when you find something equal
                 int place = Math.abs(gen.nextInt()) % 2;
                 if (place == 0) {
                     i++;
-                    System.out.println("d" + pivot + ", " + i + ", " + j + Arrays.toString(data));
                 } else {
                     data[i] = data[j];
                     data[j] = temp;
                     j--;
-                    System.out.println("e" + pivot + ", " + i + ", " + j + Arrays.toString(data));
                 }
             }
         }
@@ -74,7 +69,6 @@ public class Quick {
         }
         data[start] = data[i];
         data[i] = pivot; //puts the pivot in the right position
-        //System.out.println("f" + pivot + ", " + i + ", " + j + Arrays.toString(data));
         return i;
     }
 

@@ -108,7 +108,7 @@ public class Driver {
         }
         */
 
-
+        /*
         Random gen = new Random();
         int[] slow = new int[5];
         int[] slowAns = new int[5];
@@ -122,6 +122,7 @@ public class Driver {
         Arrays.sort(slowAns);
         System.out.println(Arrays.toString(slow));
         System.out.println(Arrays.equals(slow, slowAns));
+        */
 
         /*
         int[] test1 = {6, 2, 7, 3, 1, 3};
@@ -140,5 +141,8 @@ public class Driver {
         System.out.println(Quick.quickselect(test4, 3));
         System.out.println(Arrays.toString(test4));
         */
+
+        int[] test1 = {928, 841, 562, 346, 635};
+        Quick.quicksort(test1);
     }
 }
