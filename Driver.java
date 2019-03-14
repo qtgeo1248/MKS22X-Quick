@@ -122,10 +122,10 @@ public class Driver {
         */
 
         //TESTING SPEED OF QUICKSORT
-        for (int size = 1; size <= 8; size++) {
+        for (int size = 1; size <= 3; size++) {
             Random gen = new Random();
-            int[] slow = new int[size * 500000];
-            int[] slower = new int[size * 500000];
+            int[] slow = new int[(int)Math.pow(2, size) * 500000];
+            int[] slower = new int[(int)Math.pow(2, size) * 500000];
             for (int i = 0; i < slow.length; i++) {
                 int add = Math.abs(gen.nextInt()) % 1000;
                 slow[i] = add;
@@ -134,9 +134,12 @@ public class Driver {
             long startQuick = System.currentTimeMillis();
             Quick.quicksort(slow);
             long endQuick = System.currentTimeMillis();
-            long startQuick = System.currentTimeMillis();
-            Quick.quicksort(slow);
-            long endQuick = System.currentTimeMillis();
+            long startIns = System.currentTimeMillis();
+            insertionSort(slower);
+            long endIns = System.currentTimeMillis();
+            System.out.println(size);
+            System.out.println("QuickSort: " + (endQuick - startQuick));
+            System.out.println("InsertionSort: " + (endIns - startIns));
         }
 
 
