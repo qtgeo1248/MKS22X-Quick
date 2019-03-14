@@ -26,7 +26,7 @@ public class Quick {
         quicksortH(data, 0, data.length - 1);
     }
 
-    public static void quicksortH(int[] data, int start, int end) {
+    private static void quicksortH(int[] data, int start, int end) {
         if (start < end) {
             int ans = partition(data, start, end);
             quicksortH(data, start, ans - 1);
@@ -34,7 +34,7 @@ public class Quick {
         }
     }
 
-    public static int partition(int[] data, int start, int end) {
+    private static int partition(int[] data, int start, int end) {
         Random gen = new Random();
         if (data.length == 0) {
             return 0;
@@ -72,7 +72,7 @@ public class Quick {
         return i;
     }
 
-    public static int median(int[] data, int start, int end) {
+    private static int median(int[] data, int start, int end) {
         int middle = (start + end) / 2;
         if ((data[start] <= data[end] && data[start] >= data[middle]) || (data[start] >= data[end] && data[start] <= data[middle])) {
             return start;
