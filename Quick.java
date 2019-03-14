@@ -81,6 +81,13 @@ public class Quick {
     }
 
     public static int[] partitionDutch(int[] data, int start, int end) {
+        Random gen = new Random();
+        int pivotIdx = median(data, start, end);
+        int pivot = data[pivotIdx];
+        data[pivotIdx] = data[start];
+        data[start] = pivot;
+        int i = start; //records the value to be returned (will be changed as I go through algorithm)
+        int j = end; //records the index of the greater than
         int[] ans = {};
         return ans;//TEMP
     }
