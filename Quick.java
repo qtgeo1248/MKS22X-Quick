@@ -91,6 +91,9 @@ public class Quick {
         int gt = end; //records the index of the greater than
         while (i < gt) {
             int temp = data[i];
+            if (temp == pivot) {
+                i++;
+            }
         }
         int[] ans = {};
         return ans;//TEMP
