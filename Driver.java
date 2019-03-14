@@ -4,6 +4,19 @@ import java.lang.Math;
 import java.util.Arrays;
 
 public class Driver {
+    public static void insertionSort(int[] data) {
+        for (int i = 1; i < data.length; i++) {
+            boolean isDone = false;
+            int now = data[i];
+            int j = i - 1;
+            while (j > -1 && data[j] > now) {
+                data[j + 1] = data[j];
+                j--;
+            }
+            data[j + 1] = now;
+        }
+    }
+
     public static boolean test(int[] data, int k, int ans) {
         int less = 0;
         int same = 0;
@@ -118,6 +131,9 @@ public class Driver {
                 slow[i] = add;
                 slower[i] = add;
             }
+            long startQuick = System.currentTimeMillis();
+            Quick.quicksort(slow);
+            long endQuick = System.currentTimeMillis();
             long startQuick = System.currentTimeMillis();
             Quick.quicksort(slow);
             long endQuick = System.currentTimeMillis();
