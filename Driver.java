@@ -109,13 +109,13 @@ public class Driver {
         */
 
 
-        /*
-        int[] slow = new int[16385];
+        Random gen = new Random();
+        int[] slow = new int[500000];
         for (int i = 0; i < slow.length; i++) {
-            slow[i] = Math.abs(gen.nextInt()) % 2;
+            slow[i] = Math.abs(gen.nextInt()) % 1000;
         }
         System.out.println("5000: " + Quick.quickselect(slow, 5000));
-        */
+
         /*
         int[] test1 = {6, 2, 7, 3, 1, 3};
         System.out.println(Quick.quickselect(test1, 1));
