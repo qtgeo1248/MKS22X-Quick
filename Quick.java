@@ -86,8 +86,12 @@ public class Quick {
         int pivot = data[pivotIdx];
         data[pivotIdx] = data[start];
         data[start] = pivot;
-        int i = start; //records the value to be returned (will be changed as I go through algorithm)
-        int j = end; //records the index of the greater than
+        int lt = start; //records the value to be returned (will be changed as I go through algorithm)
+        int i = start; //records the duplicates
+        int gt = end; //records the index of the greater than
+        while (i < gt) {
+            int temp = data[i];
+        }
         int[] ans = {};
         return ans;//TEMP
     }
