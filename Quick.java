@@ -36,9 +36,6 @@ public class Quick {
 
     private static int partition(int[] data, int start, int end) {
         Random gen = new Random();
-        if (data.length == 0) {
-            return 0;
-        }
         int pivotIdx = median(data, start, end);
         int pivot = data[pivotIdx];
         data[pivotIdx] = data[start];
@@ -81,5 +78,10 @@ public class Quick {
         } else {
             return end;
         }
+    }
+
+    public static int[] partitionDutch(int[] data, int start, int end) {
+        int[] ans = {};
+        return ans;//TEMP
     }
 }
