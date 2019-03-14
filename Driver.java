@@ -137,7 +137,7 @@ public class Driver {
             long startIns = System.currentTimeMillis();
             insertionSort(slower);
             long endIns = System.currentTimeMillis();
-            System.out.println(size);
+            System.out.println((int)Math.pow(2, size) * 500000);
             System.out.println("QuickSort: " + (endQuick - startQuick));
             System.out.println("InsertionSort: " + (endIns - startIns) + "\n");
         }
