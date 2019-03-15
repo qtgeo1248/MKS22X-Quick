@@ -89,7 +89,7 @@ public class Quick {
         int lt = start; //records the value to be returned (will be changed as I go through algorithm)
         int i = start; //records the duplicates
         int gt = end; //records the index of the greater than
-        while (i < gt) {
+        while (i <= gt) {
             int temp = data[i];
             if (temp == pivot) {
                 i++;
@@ -104,7 +104,9 @@ public class Quick {
                 gt--;
             }
         }
-        int[] ans = {};
-        return ans;//TEMP
+        data[start] = data[i];
+        data[i] = pivot; //puts the pivot in the right position
+        int[] ans = {lt - 1, gt + 1};
+        return ans;
     }
 }
