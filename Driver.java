@@ -150,7 +150,7 @@ public class Driver {
         System.out.println(Arrays.toString(Quick.partitionDutch(test1, 0, 5)));
         System.out.println(Arrays.toString(test1));
         int[] test2 = {8, 2, 6, 1, 4, 3, 7, 9, 0};
-        System.out.println(Arrays.toString(Quick.partitionDutch(test2, 2, 6)));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test2, 0, 8)));
         System.out.println(Arrays.toString(test2));
         int[] test3 = {3};
         System.out.println(Arrays.toString(Quick.partitionDutch(test3, 0, 0)));
@@ -159,7 +159,7 @@ public class Driver {
         System.out.println(Arrays.toString(Quick.partitionDutch(test5, 0, 1)));
         System.out.println(Arrays.toString(test5));
         int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
-        System.out.println(Arrays.toString(Quick.partitionDutch(test4, 3, 16)));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test4, 0, 17)));
         System.out.println(Arrays.toString(test4));
 
 

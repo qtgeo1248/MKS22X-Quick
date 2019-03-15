@@ -107,10 +107,7 @@ public class Quick {
                 System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             }
         }
-        System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
-        data[start] = data[i];
-        data[i] = pivot; //puts the pivot in the right position
-        int[] ans = {lt - 1, gt + 1};
+        int[] ans = {lt, gt};
         System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
         return ans;
     }
