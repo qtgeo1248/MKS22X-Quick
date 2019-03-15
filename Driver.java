@@ -147,19 +147,19 @@ public class Driver {
 
 
         int[] test1 = {6, 2, 7, 3, 1, 3};
-        System.out.println(Quick.quickselect(test1, 3));
+        Quick.quicksort(test1);
         System.out.println(Arrays.toString(test1));
         int[] test2 = {8, 2, 6, 1, 4, 3, 7, 9, 0};
-        System.out.println(Quick.quickselect(test2, 7));
+        Quick.quicksort(test2);
         System.out.println(Arrays.toString(test2));
         int[] test3 = {3};
-        System.out.println(Quick.quickselect(test3, 0));
+        Quick.quicksort(test3);
         System.out.println(Arrays.toString(test3));
-        int[] test5 = {2, 1};
-        System.out.println(Quick.quickselect(test5, 0));
+        int[] test5 = {2, 1, 1, 1};
+        Quick.quicksort(test5);
         System.out.println(Arrays.toString(test5));
         int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
-        System.out.println(Quick.quickselect(test4, 4));
+        Quick.quicksort(test4);
         System.out.println(Arrays.toString(test4));
 
 
