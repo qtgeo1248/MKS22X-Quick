@@ -9,14 +9,14 @@ public class Quick {
     }
 
     private static int quickselectH(int[] data, int k, int start, int end) {
-        int[] ans = partition(data, start, end);
+        int[] ans = partitionDutch(data, start, end);
         while (ans[0] > k || ans[1] < k) {
             if (ans[1] < k) { //case when you undershoot
                 start = ans[1] + 1;
-                ans = partition(data, start, end);
+                ans = partitionDutch(data, start, end);
             } else { //case when you overshoot
                 end = ans[0] - 1;
-                ans = partition(data, start, end);
+                ans = partitionDutch(data, start, end);
             }
         }
         return data[ans[0]];
