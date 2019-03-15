@@ -9,7 +9,7 @@ public class Quick {
     }
 
     private static int quickselectH(int[] data, int k, int start, int end) {
-        int ans = partition(data, start, end);
+        int[] ans = partition(data, start, end);
         while (ans != k) {
             if (ans < k) { //case when you undershoot
                 start = ans + 1;
