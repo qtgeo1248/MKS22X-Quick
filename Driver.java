@@ -121,6 +121,7 @@ public class Driver {
         }
         */
 
+        /*
         //TESTING SPEED OF QUICKSORT
         for (int size = 0; size <= 3; size++) {
             Random gen = new Random();
@@ -141,23 +142,24 @@ public class Driver {
             System.out.println("QuickSort: " + (endQuick - startQuick));
             //System.out.println("InsertionSort: " + (endIns - startIns) + "\n");
         }
+        */
 
 
 
         int[] test1 = {6, 2, 7, 3, 1, 3};
-        System.out.println(Quick.partitionDutch(test1, 0, 5));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test1, 0, 5)));
         System.out.println(Arrays.toString(test1));
         int[] test2 = {8, 2, 6, 1, 4, 3, 7, 9, 0};
-        System.out.println(Quick.partitionDutch(test2, 2, 6));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test2, 2, 6)));
         System.out.println(Arrays.toString(test2));
         int[] test3 = {3};
-        System.out.println(Quick.partitionDutch(test3, 0, 0));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test3, 0, 0)));
         System.out.println(Arrays.toString(test3));
         int[] test5 = {2, 1};
-        System.out.println(Quick.partitionDutch(test5, 0, 1));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test5, 0, 1)));
         System.out.println(Arrays.toString(test5));
         int[] test4 = {-84, -66, -88, 84, 88, -97, -70, -51, 4, -20, -90, -28, 50, 18, -55, -94, -99, 81};
-        System.out.println(Quick.partitionDutch(test4, 3, 16));
+        System.out.println(Arrays.toString(Quick.partitionDutch(test4, 3, 16)));
         System.out.println(Arrays.toString(test4));
 
 

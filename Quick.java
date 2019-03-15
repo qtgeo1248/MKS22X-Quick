@@ -81,7 +81,6 @@ public class Quick {
     }
 
     public static int[] partitionDutch(int[] data, int start, int end) {
-        Random gen = new Random();
         int pivotIdx = median(data, start, end);
         int pivot = data[pivotIdx];
         data[pivotIdx] = data[start];
@@ -89,24 +88,30 @@ public class Quick {
         int lt = start; //records the value to be returned (will be changed as I go through algorithm)
         int i = start; //records the duplicates
         int gt = end; //records the index of the greater than
+        System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
         while (i <= gt) {
             int temp = data[i];
             if (temp == pivot) {
                 i++;
+                System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             } else if (temp < pivot) {
                 data[i] = data[lt];
                 data[lt] = temp;
                 lt++;
                 i++;
+                System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             } else {
                 data[i] = data[gt];
                 data[gt] = temp;
                 gt--;
+                System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             }
         }
+        System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
         data[start] = data[i];
         data[i] = pivot; //puts the pivot in the right position
         int[] ans = {lt - 1, gt + 1};
+        System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
         return ans;
     }
 }
