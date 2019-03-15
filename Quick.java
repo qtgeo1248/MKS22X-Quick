@@ -15,7 +15,7 @@ public class Quick {
                 start = ans[1] + 1;
                 ans = partition(data, start, end);
             } else { //case when you overshoot
-                end = ans - 1;
+                end = ans[0] - 1;
                 ans = partition(data, start, end);
             }
         }
