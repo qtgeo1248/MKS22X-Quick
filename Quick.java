@@ -88,27 +88,27 @@ public class Quick {
         int lt = start; //records the value to be returned (will be changed as I go through algorithm)
         int i = start; //records the duplicates
         int gt = end; //records the index of the greater than
-        System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
+        //System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
         while (i <= gt) {
             int temp = data[i];
             if (temp == pivot) {
                 i++;
-                System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
+                //System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             } else if (temp < pivot) {
                 data[i] = data[lt];
                 data[lt] = temp;
                 lt++;
                 i++;
-                System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
+                //System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             } else {
                 data[i] = data[gt];
                 data[gt] = temp;
                 gt--;
-                System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
+                //System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
             }
         }
         int[] ans = {lt, gt};
-        System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
+        //System.out.println(pivot + "," + lt + "," + i + "," + gt + Arrays.toString(data));
         return ans;
     }
 }
