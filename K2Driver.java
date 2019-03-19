@@ -53,22 +53,22 @@ public class K2Driver {
     }
 
     public static void main(String[] args) {
+        for (int size = 31250; size < 1000001; size *= 2) {
+            for (int type = 0; type <= 3; type++) {
+                int[] start = makeArray(size, type);
+                int[] result = Arrays.copyOf(start, start.length);
 
-        int size = Integer.parseInt(args[0]);
-        int type = Integer.parseInt(args[1]);
+                Arrays.sort(result);
+                long startTime = System.currentTimeMillis();
+                Quick.quicksort(start);
+                long elapsedTime = System.currentTimeMillis() - startTime;
 
-        int[] start = makeArray(size, type);
-        int[] result = Arrays.copyOf(start, start.length);
-
-        Arrays.sort(result);
-        long startTime = System.currentTimeMillis();
-        Quick.quicksort(start);
-        long elapsedTime = System.currentTimeMillis() - startTime;
-
-        if (Arrays.equals(start, result)) {
-            System.out.println("PASS Case " + name(type) + "\t array, size:" + start.length + "\t" + elapsedTime / 1000.0 + "sec ");
-        } else {
-            System.out.println("FAIL ! ERROR ! " + name(type) + " array, size:" + size + "  ERROR!");
+                if (Arrays.equals(start, result)) {
+                    System.out.println("PASS Case " + name(type) + "\t array, size:" + start.length + "\t" + elapsedTime / 1000.0 + "sec ");
+                } else {
+                    System.out.println("FAIL ! ERROR ! " + name(type) + " array, size:" + size + "  ERROR!");
+                }
+            }
         }
     }
 }
