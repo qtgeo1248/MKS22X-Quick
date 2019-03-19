@@ -1,7 +1,10 @@
 import java.util.Arrays;
+import java.util.Random;
+import java.lang.Math;
 
 public class KDriver {
     public static void main(String[] args) {
+        Random gen = new Random(64);
         System.out.println("Size\t\tMax Value\tquick/builtin ratio ");
         int[] MAX_LIST = {1000000000, 500, 10};
         for (int MAX : MAX_LIST) {
@@ -13,7 +16,7 @@ public class KDriver {
                     int[] data1 = new int[size];
                     int[] data2 = new int[size];
                     for (int i = 0; i < data1.length; i++) {
-                        data1[i] = (int)(Math.random() * MAX);
+                        data1[i] = Math.abs(gen.nextInt()) % (MAX + 1);
                         data2[i] = data1[i];
                     }
                     long t1, t2;

@@ -40,7 +40,7 @@ public class Quick {
 
     private static void quicksortH(int[] data, int start, int end) {
         if (start < end) {
-            if (end - start <= 4) {
+            if (end - start <= 128) {
                 insertionSort(data, start, end);
                 return;
             }
