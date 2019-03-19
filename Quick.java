@@ -40,6 +40,10 @@ public class Quick {
 
     private static void quicksortH(int[] data, int start, int end) {
         if (start < end) {
+            if (end - start <= 4) {
+                insertionSort(data, start, end);
+                return;
+            }
             int ans[] = partitionDutch(data, start, end);
             quicksortH(data, start, ans[0] - 1);
             quicksortH(data, ans[1] + 1, end);
