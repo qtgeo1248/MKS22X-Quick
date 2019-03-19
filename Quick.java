@@ -5,7 +5,14 @@ import java.lang.Math;
 public class Quick {
     public static void insertionSort(int[] data, int lo, int hi) {
         for (int i = lo + 1; i <= hi; i++) {
-
+            boolean isDone = false;
+            int now = data[i];
+            int j = i - 1;
+            while (j > -1 && data[j] > now) {
+                data[j + 1] = data[j];
+                j--;
+            }
+            data[j + 1] = now;
         }
     }
 
