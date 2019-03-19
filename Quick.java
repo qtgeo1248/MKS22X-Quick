@@ -3,6 +3,11 @@ import java.util.Random;
 import java.lang.Math;
 
 public class Quick {
+    public static void insertionSort(int[] data, int lo, int hi) {
+        for (int i = lo + 1; i <= hi; i++) {
+
+        }
+    }
 
     public static int quickselect(int[] data, int k) {
         return quickselectH(data, k, 0, data.length - 1);
