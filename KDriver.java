@@ -4,7 +4,7 @@ import java.lang.Math;
 
 public class KDriver {
     public static void main(String[] args) {
-        Random gen = new Random(64);
+        Random gen = new Random();
         System.out.println("Size\t\tMax Value\tquick/builtin ratio ");
         int[] MAX_LIST = {1000000000, 500, 10};
         for (int MAX : MAX_LIST) {
