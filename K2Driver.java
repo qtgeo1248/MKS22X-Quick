@@ -53,6 +53,7 @@ public class K2Driver {
     }
 
     public static void main(String[] args) {
+        //for (int size = 4000000; size < 4000001; size++) {
         for (int size = 31250; size < 1000001; size *= 2) {
             for (int type = 0; type <= 3; type++) {
                 int[] start = makeArray(size, type);
