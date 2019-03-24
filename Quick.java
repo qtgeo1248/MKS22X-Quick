@@ -3,7 +3,7 @@ import java.util.Random;
 import java.lang.Math;
 
 public class Quick {
-    public static void insertionSort(int[] data, int lo, int hi) {
+    private static void insertionSort(int[] data, int lo, int hi) {
         for (int i = lo + 1; i <= hi; i++) {
             boolean isDone = false;
             int now = data[i];
